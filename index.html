@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia Gallo Performance | Belford Roxo - RJ</title>
+    
+    <!-- SEO Básico -->
+    <meta name="description" content="A melhor academia de Belford Roxo. Equipamentos de primeira linha, professores atenciosos e ambiente motivador. Agende sua aula experimental grátis!">
+    <meta name="keywords" content="academia belford roxo, gallo performance, musculação, crossfit, treino, academia perto de mim">
+
+    <!-- Open Graph / Redes Sociais (WhatsApp/Facebook/Instagram) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.academiagalloperformance.com.br/">
+    <meta property="og:title" content="Academia Gallo Performance | Sua Melhor Versão">
+    <meta property="og:description" content="Equipamentos de primeira linha, professores atenciosos e ambiente motivador. Venha fazer sua aula experimental grátis!">
+    <!-- SUBSTITUA PELO LINK DA FOTO REAL DA FACHADA -->
+    <meta property="og:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop">
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Schema Markup para SEO Local (Google) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HealthAndBeautyBusiness",
+      "name": "Academia Gallo Performance",
+      "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop",
+      "@id": "",
+      "url": "",
+      "telephone": "",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "R. Francisco Monteiro, 160 - Lote XV",
+        "addressLocality": "Belford Roxo",
+        "addressRegion": "RJ",
+        "postalCode": "26183-246",
+        "addressCountry": "BR"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "4959"
+      }
+    }
+    </script>
+
+    <style>
+        /* =========================================
+           CSS - ESTILOS DA PÁGINA
+        ========================================= */
+        :root {
+            --bg-color: #0a0a0a;
+            --bg-darker: #050505;
+            --bg-card: #121212;
+            --primary-color: #e60000; /* Vermelho Neon */
+            --accent-color: #ffcc00;  /* Amarelo Neon */
+            --text-color: #f4f4f4;
+            --text-muted: #a0a0a0;
+            --font-heading: 'Oswald', sans-serif;
+            --font-body: 'Montserrat', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* Tipografia */
+        h1, h2, h3 { font-family: var(--font-heading); text-transform: uppercase; line-height: 1.1; }
+        .section-title { font-size: 2.5rem; text-align: center; margin-bottom: 3rem; }
+        .section-title span { color: var(--primary-color); }
+
+        /* Header */
+        header {
+            position: fixed; top: 0; width: 100%; padding: 20px 0;
+            z-index: 1000; transition: all 0.4s ease;
+        }
+        header.scrolled {
+            background: rgba(10, 10, 10, 0.95); padding: 10px 0;
+            box-shadow: 0 2px 10px rgba(230, 0, 0, 0.2); backdrop-filter: blur(10px);
+        }
+        .header-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; letter-spacing: 1px; z-index: 1001; }
+        .logo-gallo { color: var(--accent-color); }
+        
+        /* Navegação Desktop */
+        nav { display: flex; align-items: center; }
+        nav a {
+            color: var(--text-color); text-decoration: none; margin-left: 20px;
+            font-size: 0.9rem; font-weight: 600; transition: color 0.3s ease;
+        }
+        nav a:hover { color: var(--primary-color); }
+
+        /* Menu Mobile (Hamburger) */
+        .mobile-menu-icon { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1001; }
+        .mobile-menu-icon span { width: 30px; height: 3px; background-color: var(--text-color); transition: 0.3s; }
+        .mobile-menu-icon.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+        .mobile-menu-icon.active span:nth-child(2) { opacity: 0; }
+        .mobile-menu-icon.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
+
+        /* Botões */
+        .btn {
+            display: inline-block; padding: 12px 30px; font-family: var(--font-heading);
+            font-size: 1rem; font-weight: 700; text-transform: uppercase;
+            text-decoration: none; border-radius: 4px; cursor: pointer;
+            position: relative; overflow: hidden; transition: all 0.3s ease;
+            border: none; z-index: 1; text-align: center;
+        }
+        .btn-primary {
+            background-color: var(--primary-color); color: #fff;
+            box-shadow: 0 0 15px rgba(230, 0, 0, 0.4);
+        }
+        .btn-primary:hover {
+            background-color: #ff1a1a; box-shadow: 0 0 25px rgba(230, 0, 0, 0.8);
+            transform: translateY(-2px);
+        }
+        .btn-outline {
+            background: transparent; color: var(--text-color);
+            border: 2px solid var(--primary-color);
+        }
+        .btn-outline:hover { background: var(--primary-color); }
+
+        /* Efeito Ripple (Onda) */
+        .ripple {
+            position: absolute; border-radius: 50%; transform: scale(0);
+            animation: ripple-anim 0.6s linear; background-color: rgba(255, 255, 255, 0.4);
+        }
+        @keyframes ripple-anim { to { transform: scale(4); opacity: 0; } }
+
+        /* Hero Section */
+        #hero {
+            height: 100vh; display: flex; align-items: center; position: relative;
+            /* SUBSTITUA PELA FOTO DA FACHADA */
+            background: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop') no-repeat center center/cover;
+            background-attachment: fixed;
+        }
+        .hero-overlay {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(90deg, rgba(5,5,5,0.95) 0%, rgba(5,5,5,0.6) 100%);
+        }
+        .hero-content { position: relative; z-index: 2; max-width: 800px; }
+        .hero-content h1 { font-size: 4.5rem; margin-bottom: 20px; }
+        .glow-text { text-shadow: 0 0 20px rgba(230, 0, 0, 0.5); }
+        .hero-content p { font-size: 1.2rem; color: var(--text-muted); margin-bottom: 30px; max-width: 600px; }
+        .hero-ctas { display: flex; gap: 15px; margin-bottom: 30px; flex-wrap: wrap; }
+        .social-proof { display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: var(--text-muted); }
+        .stars { color: var(--accent-color); font-size: 1.2rem; }
+
+        /* Seções */
+        .section { padding: 100px 0; }
+        .bg-darker { background-color: var(--bg-darker); }
+
+        /* Grid Sobre */
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card {
+            background: var(--bg-card); padding: 40px; border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(230, 0, 0, 0.1); }
+        .card h3 { font-size: 1.5rem; margin-bottom: 15px; color: var(--accent-color); }
+
+        /* Galeria */
+        .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        .gallery-item { position: relative; border-radius: 8px; overflow: hidden; height: 300px; }
+        .gallery-item:nth-child(1) { grid-column: span 2; height: 400px; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .gallery-item:hover img { transform: scale(1.05); }
+        .gallery-overlay {
+            position: absolute; bottom: 0; left: 0; width: 100%; padding: 20px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            opacity: 0; transition: opacity 0.3s ease;
+        }
+        .gallery-item:hover .gallery-overlay { opacity: 1; }
+
+        /* Planos */
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .pricing-card {
+            background: var(--bg-card); padding: 40px 30px; border-radius: 8px;
+            text-align: center; border: 1px solid #333; position: relative;
+            transition: transform 0.3s ease;
+        }
+        .pricing-card:hover { transform: translateY(-10px); border-color: var(--primary-color); }
+        .pricing-card.popular { border: 2px solid var(--primary-color); transform: scale(1.05); }
+        .pricing-card.popular:hover { transform: scale(1.05) translateY(-10px); }
+        .popular-badge {
+            position: absolute; top: -15px; left: 50%; transform: translateX(-50%);
+            background: var(--primary-color); color: white; padding: 5px 15px;
+            border-radius: 20px; font-size: 0.8rem; font-weight: bold; letter-spacing: 1px;
+        }
+        .pricing-card h3 { font-size: 1.5rem; color: var(--text-color); margin-bottom: 10px; }
+        .price { font-size: 3rem; font-family: var(--font-heading); color: var(--accent-color); margin-bottom: 20px; }
+        .price span { font-size: 1rem; color: var(--text-muted); font-family: var(--font-body); }
+        .pricing-features { list-style: none; margin-bottom: 30px; text-align: left; }
+        .pricing-features li { margin-bottom: 10px; color: var(--text-muted); border-bottom: 1px solid #222; padding-bottom: 10px; }
+        .pricing-features li::before { content: "✓"; color: var(--primary-color); margin-right: 10px; font-weight: bold; }
+
+        /* Avaliações */
+        .testimonials-slider { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .testimonial-card { background: var(--bg-card); padding: 30px; border-radius: 8px; position: relative; }
+        .testimonial-card::before {
+            content: '"'; font-family: var(--font-heading); font-size: 6rem;
+            color: rgba(230, 0, 0, 0.1); position: absolute; top: 0; left: 10px;
+        }
+        .quote { font-style: italic; margin-bottom: 20px; position: relative; z-index: 1; }
+        .author { font-weight: 700; color: var(--accent-color); }
+
+        /* FAQ (Perguntas Frequentes) */
+        .faq-container { max-width: 800px; margin: 0 auto; }
+        details {
+            background: var(--bg-card); margin-bottom: 15px; border-radius: 8px;
+            border-left: 4px solid var(--accent-color); padding: 15px 20px;
+            cursor: pointer; transition: background 0.3s;
+        }
+        details:hover { background: #1a1a1a; }
+        summary { font-weight: 600; font-family: var(--font-heading); font-size: 1.2rem; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+        summary::-webkit-details-marker { display: none; }
+        summary::after { content: '+'; font-size: 1.5rem; color: var(--primary-color); transition: transform 0.3s; }
+        details[open] summary::after { transform: rotate(45deg); }
+        details p { margin-top: 15px; color: var(--text-muted); }
+
+        /* Contato & Formulário */
+        .contact-section {
+            background: linear-gradient(rgba(5,5,5,0.9), rgba(5,5,5,0.95)), url('https://images.unsplash.com/photo-1576678927484-cc907957088c?q=80&w=1374&auto=format&fit=crop') no-repeat center center/cover;
+            background-attachment: fixed;
+        }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
+        .contact-info h2 { font-size: 2.5rem; margin-bottom: 20px; }
+        .contact-info p { margin-bottom: 20px; color: var(--text-muted); }
+        .info-item { margin-bottom: 15px; display: flex; align-items: flex-start; gap: 10px; }
+        .info-item strong { color: var(--accent-color); display: block; margin-bottom: 5px; }
+        
+        /* Formulário */
+        .lead-form { background: rgba(18, 18, 18, 0.8); padding: 40px; border-radius: 8px; border: 1px solid #333; backdrop-filter: blur(5px); }
+        .lead-form h3 { margin-bottom: 20px; color: var(--accent-color); font-size: 1.8rem; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-size: 0.9rem; font-weight: 600; }
+        .form-control {
+            width: 100%; padding: 12px 15px; background: #000; border: 1px solid #333;
+            color: white; border-radius: 4px; font-family: var(--font-body); font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        .form-control:focus { outline: none; border-color: var(--primary-color); box-shadow: 0 0 10px rgba(230, 0, 0, 0.2); }
+        .form-control::placeholder { color: #555; }
+        .btn-submit { width: 100%; }
+
+        /* Mapa */
+        .map-container { margin-top: 50px; border-radius: 8px; overflow: hidden; border: 2px solid #333; }
+
+        /* Footer */
+        footer { text-align: center; padding: 30px; background: #000; color: var(--text-muted); font-size: 0.9rem; }
+
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white;
+            width: 60px; height: 60px; border-radius: 50%; display: flex;
+            justify-content: center; align-items: center; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000; transition: transform 0.3s ease;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); }
+
+        /* Efeito de Scroll (Reveal) */
+        .reveal { opacity: 0; transform: translateY(50px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* Responsividade */
+        @media (max-width: 900px) {
+            .contact-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-icon { display: flex; }
+            nav {
+                position: fixed; top: 0; right: -100%; width: 70%; height: 100vh;
+                background: rgba(10, 10, 10, 0.98); backdrop-filter: blur(10px);
+                display: flex; flex-direction: column; justify-content: center; align-items: center;
+                transition: right 0.4s ease; z-index: 1000; gap: 20px;
+            }
+            nav.active { right: 0; }
+            nav a { margin: 0; font-size: 1.2rem; }
+            .hero-content h1 { font-size: 3rem; }
+            .hero-ctas { flex-direction: column; }
+            .gallery-grid { grid-template-columns: 1fr; }
+            .gallery-item:nth-child(1) { grid-column: span 1; height: 300px; }
+            .pricing-card.popular { transform: scale(1); }
+            .pricing-card.popular:hover { transform: translateY(-10px); }
+            .lead-form { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <div class="logo">
+                <span class="logo-gallo"><img src="gallo.png" style="width: 100px; height: 100px;" /></span>
+            </div>
+            
+            <div class="mobile-menu-icon" id="mobile-menu-btn">
+                <span></span><span></span><span></span>
+            </div>
+
+            <nav id="nav-menu">
+                <a href="#sobre" class="nav-link">A Academia</a>
+                <a href="#estrutura" class="nav-link">Estrutura</a>
+                <a href="#planos" class="nav-link">Planos</a>
+                <a href="#contato" class="nav-link">Contato</a>
+                <!-- Substitua o link abaixo pelo seu número de WhatsApp -->
+                <a href="https://wa.me/5521999999999" target="_blank" class="btn btn-primary btn-magnetic" onclick="trackClick('Header_CTA')">Aula Grátis</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content reveal">
+            <h1 class="glow-text">SUA MELHOR VERSÃO<br>COMEÇA AQUI.</h1>
+            <p>Equipamentos de primeira linha, professores atenciosos e um ambiente que motiva. Junte-se à elite da Gallo Performance.</p>
+            <div class="hero-ctas">
+                <!-- Substitua o link abaixo pelo seu número de WhatsApp -->
+                <a href="https://wa.me/5521999999999" target="_blank" class="btn btn-primary btn-ripple" onclick="trackClick('Hero_CTA_WhatsApp')">Agendar Aula Experimental Grátis</a>
+                <a href="#planos" class="btn btn-outline btn-ripple">Ver Planos</a>
+            </div>
+            <div class="social-proof">
+                <span class="stars">★★★★★</span> <strong>4,9</strong> (4.959 avaliações no Google)
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="section bg-darker">
+        <div class="container reveal">
+            <h2 class="section-title">Por que escolher a <span>Gallo Performance?</span></h2>
+            <div class="grid-3">
+                <div class="card reveal" style="transition-delay: 0.1s;">
+                    <h3>Equipamentos Inovadores</h3>
+                    <p>Aparelhos bons e inovadores de última geração para garantir o melhor treino e resultados.</p>
+                </div>
+                <div class="card reveal" style="transition-delay: 0.2s;">
+                    <h3>Professores Atenciosos</h3>
+                    <p>Uma equipe dedicada a te acompanhar, corrigir e motivar em cada etapa do seu treino.</p>
+                </div>
+                <div class="card reveal" style="transition-delay: 0.3s;">
+                    <h3>Ambiente Motivador</h3>
+                    <p>Um lugar pensado para cuidar da sua saúde e buscar sempre os melhores resultados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estrutura -->
+    <section id="estrutura" class="section">
+        <div class="container">
+            <h2 class="section-title reveal">Nossa <span>Estrutura</span></h2>
+            <div class="gallery-grid">
+                <!-- SUBSTITUA OS SRC PELAS SUAS FOTOS (mantenha o loading="lazy") -->
+                <div class="gallery-item reveal">
+                    <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TH-WvKP_AhKcOheUfvneyPJ_xjKLSis9GGvpK9F2gClNI4BPpLx4jka-_wdWw4OrQ3JGjQNxzASFKVa1HdqWe_I-p9cX-G2jrqvZYvkp_uWB4sBj3EpIO2ZSpTisc8LQjNqonXXEMjrQpe=s1360-w1360-h1020-rw" alt="Fachada Academia" loading="lazy">
+                    <div class="gallery-overlay"><p>Fachada Moderna</p></div>
+                </div>
+                <div class="gallery-item reveal" style="transition-delay: 0.1s;">
+                    <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TeTmgcF5uXGlxs7UwraTMMytdbg-1KCggAoeZEdNaNT-eVZFdMn1z9AGOv0MXSm_deEIx1d4csJQYn3mXplxQWtXtSBp6jNR8ICwmECuhmMkCgOa_zOrMWy9pyjZYnpKzsdm_c_U5ot-U=s1360-w1360-h1020-rw" alt="Interior Iluminação" loading="lazy">
+                    <div class="gallery-overlay"><p>Iluminação de Ponta</p></div>
+                </div>
+                <div class="gallery-item reveal" style="transition-delay: 0.2s;">
+                    <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SWNnfbp1BhO47MoMlrGQq6qZKQPtOQBwQlfpuWskiS9D584aAy3u9Okk-ef8KJ7edXF82_ajeOqh-SurNHJnUwVc02bXL08qR9EeoXNOlLV0YIXemMaiFIltITXxC2DkGeKYLZsnoH9Rc8=s1360-w1360-h1020-rw" loading="lazy">
+                    <div class="gallery-overlay"><p>Equipamentos Premium</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planos -->
+    <section id="planos" class="section bg-darker">
+        <div class="container">
+            <h2 class="section-title reveal">Escolha seu <span>Plano</span></h2>
+            <div class="pricing-grid">
+                <div class="pricing-card reveal">
+                    <h3>Mensal</h3>
+                    <div class="price">R$ 120<span>,00/mês</span></div>
+                    <ul class="pricing-features">
+                        <li>Acesso Total à Academia</li>
+                        <li>Ficha de Treino Personalizada</li>
+                        <li>Acompanhamento de Professor</li>
+                        <li>Sem taxa de matrícula</li>
+                    </ul>
+                    <a href="https://wa.me/5521999999999?text=Quero+o+Plano+Mensal" target="_blank" class="btn btn-outline btn-ripple" onclick="trackClick('Plano_Mensal')">Quero este</a>
+                </div>
+                <div class="pricing-card popular reveal" style="transition-delay: 0.1s;">
+                    <div class="popular-badge">MAIS ESCOLHIDO</div>
+                    <h3>Trimestral</h3>
+                    <div class="price">R$ 99<span>,00/mês</span></div>
+                    <ul class="pricing-features">
+                        <li>Tudo do plano Mensal</li>
+                        <li>Economia de R$ 63 por trimestre</li>
+                        <li>Avaliação Física Inclusa</li>
+                        <li>Prioridade em Aulas Coletivas</li>
+                    </ul>
+                    <a href="https://wa.me/5521999999999?text=Quero+o+Plano+Trimestral" target="_blank" class="btn btn-primary btn-ripple" onclick="trackClick('Plano_Trimestral')">Quero este</a>
+                </div>
+                <div class="pricing-card reveal" style="transition-delay: 0.2s;">
+                    <h3>Anual</h3>
+                    <div class="price">R$ 85<span>,00/mês</span></div>
+                    <ul class="pricing-features">
+                        <li>Tudo do plano Trimestral</li>
+                        <li>Maior economia do ano</li>
+                        <li>Camisa Oficial Gallo</li>
+                        <li>Congelamento de férias (15 dias)</li>
+                    </ul>
+                    <a href="https://wa.me/5521999999999?text=Quero+o+Plano+Anual" target="_blank" class="btn btn-outline btn-ripple" onclick="trackClick('Plano_Anual')">Quero este</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Avaliações -->
+    <section id="avaliacoes" class="section">
+        <div class="container">
+            <h2 class="section-title reveal">O que dizem nossos <span>alunos</span></h2>
+            <div class="testimonials-slider">
+                <div class="testimonial-card reveal">
+                    <p class="quote">"Ótima Professores atenciosos Equipamentos de primeira linha"</p>
+                    <p class="author">- Luciene Matias</p>
+                    <span class="stars">★★★★★</span>
+                </div>
+                <div class="testimonial-card reveal" style="transition-delay: 0.1s;">
+                    <p class="quote">"A academia estar top demais, aparelhos bons e inovador!"</p>
+                    <p class="author">- Val Avelar</p>
+                    <span class="stars">★★★★★</span>
+                </div>
+                <div class="testimonial-card reveal" style="transition-delay: 0.2s;">
+                    <p class="quote">"Um lugar que motiva a cuidar da saúde e buscar sempre melhores resultados."</p>
+                    <p class="author">- Matheus Maia</p>
+                    <span class="stars">★★★★★</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section bg-darker">
+        <div class="container">
+            <h2 class="section-title reveal">Perguntas <span>Frequentes</span></h2>
+            <div class="faq-container reveal">
+                <details>
+                    <summary>Preciso ter experiência para começar?</summary>
+                    <p>De forma alguma! Temos professores qualificados que vão te acompanhar desde o primeiro dia, ensinando a execução correta dos exercícios, independentemente do seu nível atual.</p>
+                </details>
+                <details>
+                    <summary>Qual o horário de funcionamento?</summary>
+                    <p>Funcionamos de Segunda a Sexta das 06h às 22h, e aos Sábados das 08h às 12h. (Ajuste os horários conforme a realidade da academia).</p>
+                </details>
+                <details>
+                    <summary>Tem aula experimental gratuita?</summary>
+                    <p>Sim! Você pode agendar uma aula experimental gratuita clicando em qualquer botão de WhatsApp nesta página. Venha conhecer a estrutura e treinar sem compromisso.</p>
+                </details>
+                <details>
+                    <summary>Existe taxa de matrícula?</summary>
+                    <p>Os planos Trimestral e Anual são isentos de taxa de matrícula. O plano Mensal possui uma taxa única de adesão. Fale conosco para mais detalhes.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato & Captura de Leads -->
+    <section id="contato" class="section contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                
+                <!-- Informações e Mapa -->
+                <div class="contact-info reveal">
+                    <h2>PRONTO PARA MUDAR DE VIDA?</h2>
+                    <p>Venha treinar na melhor academia de Belford Roxo. Estamos prontos para te receber.</p>
+                    
+                    <div class="info-item">
+                        <div>
+                            <strong>Endereço:</strong>
+                            <p>R. Francisco Monteiro, 160 - Lote XV<br>Belford Roxo - RJ, 26183-246</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div>
+                            <strong>WhatsApp:</strong>
+                            <p>(21) 99999-9999 (Substitua pelo número real)</p>
+                        </div>
+                    </div>
+
+                    <div class="map-container">
+                        <!-- Mapa do Google Maps Real -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.330900644218!2d-43.32364477347564!3d-22.71593910213456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9971004f0610d3%3A0x99c9c049f65e6a02!2sAcademia%20Gallo%20Performance!5e0!3m2!1spt-BR!2sbr!4v1794427768762!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    </div>
+                </div>
+
+                <!-- Formulário de Lead -->
+                <div class="lead-form reveal" style="transition-delay: 0.2s;">
+                    <h3>Agende sua Aula Grátis</h3>
+                    <p style="margin-bottom: 20px; color: var(--text-muted); font-size: 0.9rem;">Preencha os dados abaixo e entraremos em contato pelo WhatsApp.</p>
+                    <form id="leadForm">
+                        <div class="form-group">
+                            <label for="nome">Nome Completo</label>
+                            <input type="text" id="nome" class="form-control" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="whatsapp">WhatsApp</label>
+                            <input type="tel" id="whatsapp" class="form-control" placeholder="(21) 99999-9999" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="objetivo">Seu Objetivo</label>
+                            <select id="objetivo" class="form-control" required>
+                                <option value="" disabled selected>Selecione...</option>
+                                <option value="Hipertrofia">Ganhar Massa Muscular</option>
+                                <option value="Emagrecimento">Emagrecer / Perder Gordura</option>
+                                <option value="Saude">Melhorar a Saúde</option>
+                                <option value="Condicionamento">Condicionamento Físico</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit btn-ripple" onclick="trackClick('Form_Submit')">Quero Minha Aula Grátis</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Academia Gallo Performance. Todos os direitos reservados.</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">Desenvolvido pela Codex Nxme</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <!-- Substitua o link abaixo pelo seu número de WhatsApp -->
+    <a href="https://wa.me/5521999999999" class="whatsapp-float" target="_blank" onclick="trackClick('Float_CTA')">
+        <svg viewBox="0 0 24 24" width="35" height="35" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.632-.370-.932-.422-1.553-1.346-1.6-1.408-.047-.061-.385-.512-.385-.977 0-.465.244-.693.331-.79.087-.097.191-.122.254-.122.061 0 .123.001.176.004.057.003.133-.021.208.161.076.186.258.63.282.676.024.046.039.101-.001.162-.04.061-.06.103-.118.162-.059.06-.125.132-.179.181-.061.054-.125.112-.054.224.071.112.316.522.676.844.464.413.854.541.976.601.122.06.193.05.265-.03.072-.08.312-.364.396-.488.083-.124.167-.104.282-.062.116.043.734.346.86.409.126.063.21.094.24.147.031.053.031.307-.113.712z"></path></svg>
+    </a>
+
+    <script>
+        /* =========================================
+           JS - EFEITOS E INTERATIVIDADE
+        ========================================= */
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // 1. Efeito de Scroll (Reveal Animations)
+            const revealElements = document.querySelectorAll('.reveal');
+            const revealOptions = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
+
+            const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                });
+            }, revealOptions);
+
+            revealElements.forEach(el => { revealOnScroll.observe(el); });
+
+            // 2. Efeito Ripple nos Botões
+            const buttons = document.querySelectorAll('.btn-ripple');
+            buttons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    const x = e.clientX - e.target.getBoundingClientRect().left;
+                    const y = e.clientY - e.target.getBoundingClientRect().top;
+
+                    const ripple = document.createElement('span');
+                    ripple.classList.add('ripple');
+                    ripple.style.left = `${x}px`;
+                    ripple.style.top = `${y}px`;
+
+                    this.appendChild(ripple);
+                    setTimeout(() => { ripple.remove(); }, 600);
+                });
+            });
+
+            // 3. Header Sticky (Muda cor ao rolar)
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            // 4. Efeito Magnético no Botão Principal
+            const magneticBtn = document.querySelector('.btn-magnetic');
+            if(magneticBtn) {
+                magneticBtn.addEventListener('mousemove', (e) => {
+                    const position = magneticBtn.getBoundingClientRect();
+                    const x = e.clientX - position.left - position.width / 2;
+                    const y = e.clientY - position.top - position.height / 2;
+                    magneticBtn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+                });
+
+                magneticBtn.addEventListener('mouseleave', () => {
+                    magneticBtn.style.transform = `translate(0px, 0px)`;
+                });
+            }
+
+            // 5. Menu Mobile Toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const navMenu = document.getElementById('nav-menu');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenuBtn.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuBtn.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+
+            // 6. Smooth Scroll para links internos
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if(target) {
+                        window.scrollTo({
+                            top: target.offsetTop - 80, // Compensa o header fixo
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // 7. Simulação de Envio de Formulário (Integração com WhatsApp)
+            const leadForm = document.getElementById('leadForm');
+            leadForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const nome = document.getElementById('nome').value;
+                const whatsapp = document.getElementById('whatsapp').value;
+                const objetivo = document.getElementById('objetivo').value;
+                
+                // Cria a mensagem para enviar no WhatsApp
+                const texto = `Olá! Meu nome é *${nome}*. Gostaria de agendar minha aula experimental gratuita.%0A%0A*WhatsApp:* ${whatsapp}%0A*Objetivo:* ${objetivo}`;
+                
+                // Substitua o número abaixo pelo número real da academia
+                const numeroAcademia = "5521999999999"; 
+                
+                // Abre o WhatsApp em nova aba
+                window.open(`https://wa.me/${numeroAcademia}?text=${texto}`, '_blank');
+                
+                // Limpa o formulário
+                leadForm.reset();
+            });
+        });
+
+        // 8. Função de Rastreamento de Cliques (Pronto para Google Analytics / Meta Pixel)
+        function trackClick(eventName) {
+            console.log(`Evento de conversão disparado: ${eventName}`);
+            // Exemplo de implementação com GA4:
+            // if (typeof gtag === 'function') {
+            //     gtag('event', 'generate_lead', { 'event_category': 'CTA', 'event_label': eventName });
+            // }
+        }
+    </script>
+</body>
+</html>
